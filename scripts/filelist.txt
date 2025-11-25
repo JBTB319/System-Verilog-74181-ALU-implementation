@@ -1,0 +1,3 @@
+/Users/bibek/Documents/Projects/ALU/hdl/rtl/Components/ripple_adder_4bit.sv
+/Users/bibek/Documents/Projects/ALU/hdl/tb/simple/tb_ripple_adder_4bit.sv
+/Users/bibek/Documents/Projects/ALU/hdl/rtl/Components/adder.sv
