@@ -1,0 +1,1 @@
+xrun -sv -f filelist.txt tb/simple/tb_ripple_adder_4bit.sv

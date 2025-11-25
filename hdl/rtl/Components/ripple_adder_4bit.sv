@@ -5,11 +5,11 @@ module ripple_adder_4bit (
    output logic [3:0]f,
    output logic c_out
 );
-   logic [3:0]c_temp;
+   logic [3:0] c_temp;
 
    genvar i;
 
-   adder fa1 (
+   adder fa0 (
       .a(a[0]),
       .b(b[0]),
       .c_in(c_in),
@@ -22,7 +22,7 @@ module ripple_adder_4bit (
          adder fa_i(
                .a(a[i]),
                .b(b[i]),
-               .c_in(c_temp[i]),
+               .c_in(c_temp[i-1]),
                .s(f[i]),
                .c_out(c_temp[i])
          );

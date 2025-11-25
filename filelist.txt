@@ -1,3 +1,2 @@
 hdl/rtl/Components/ripple_adder_4bit.sv
-hdl/tb/simple/tb_ripple_adder_4bit.sv
 hdl/rtl/Components/adder.sv
