@@ -17,23 +17,23 @@ module logic_unit (
 
    always_comb begin
       case (s)
-         4'b0000: result = ~a;
-         4'b0001: result = ~(a | b); 
-         4'b0010: result = (~a) & b; 
-         4'b0011: result = 4'b0;
-         4'b0100: result = ~(a&b);
-         4'b0101: result = ~b; 
-         4'b0110: result = a ^ b; 
-         4'b0111: result = a & (~b);
-         4'b1000: result = ~(a) | b; 
-         4'b1001: result = ~(a ^ b);
-         4'b1010: result = b;
-         4'b1011: result = a & b;
-         4'b1100: result = 4'b1111 ;
-         4'b1101: result = a | ~(b) ;
-         4'b1110: result = a | b; 
-         4'b1111: result = a;
-         default: result = 4'0000;
+         4'b0000: f = ~a;
+         4'b0001: f = ~(a | b); 
+         4'b0010: f = (~a) & b; 
+         4'b0011: f = 4'b0000;
+         4'b0100: f = ~(a&b);
+         4'b0101: f = ~b; 
+         4'b0110: f = a ^ b; 
+         4'b0111: f = a & (~b);
+         4'b1000: f = ~(a) | b; 
+         4'b1001: f = ~(a ^ b);
+         4'b1010: f = b;
+         4'b1011: f = a & b;
+         4'b1100: f = 4'b1111 ;
+         4'b1101: f = a | ~(b) ;
+         4'b1110: f = a | b; 
+         4'b1111: f = a;
+         default: f = 4'b0000;
       endcase
    end
 endmodule
