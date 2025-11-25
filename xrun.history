@@ -1,2 +1,0 @@
-#e1(24Nov2025:23:25:44): source ./xcelium.d/env.d/env.history.24Nov2025_23_25_44
-s1(24Nov2025:23:25:44):  xrun -sv -f filelist.txt hdl/tb/simple/tb_ripple_adder_4bit.sv 
