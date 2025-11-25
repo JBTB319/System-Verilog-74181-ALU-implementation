@@ -6,23 +6,9 @@ class adder_transcation;
    bit [3:0]F;
    bit C_OUT;
 
-   task display();
+   function display();
       $display("A=%h, B =%h, F=%h", this.A, this.B, this.F);
-   endtask
-
-   task randomize();
-      // The $random function returns a 32-bit signed integer.
-      // 1. Bitwise AND (&) with 'hF (4'b1111) to constrain the output to 4 bits.
-      this.A = $random & 4'hF; 
-      this.B = $random & 4'hF; 
-      
-      // 2. Constrain C_IN to 1 bit (0 or 1).
-      this.C_IN = $random & 1'b1; 
-      
-      // Clear the outputs before the test
-      this.F = 0;
-      this.C_OUT = 0;
-   endtask
+   endfunction
 
 endclass
 
