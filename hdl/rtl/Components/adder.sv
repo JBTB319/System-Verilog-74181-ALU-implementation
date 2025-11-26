@@ -1,3 +1,13 @@
+/*
+*----------------------------------------------------------------------
+* Module:   adder
+* Function: Full Adder implemented using logic gates.
+* Author:   Bibek Bhattarai
+* Date:     Nov 2025
+*----------------------------------------------------------------------
+*/
+
+
 module adder (
    input logic a,
    input logic b,

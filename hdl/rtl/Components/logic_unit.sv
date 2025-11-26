@@ -9,10 +9,10 @@
 */
 
 module logic_unit (
-   logic s[3:0],
-   logic a[3:0],
-   logic b[3:0],
-   logic f[3:0]
+   input logic    [3:0] s,
+   input logic    [3:0] a,
+   input logic    [3:0] b,
+   output logic   [3:0] f
 );
 
    always_comb begin

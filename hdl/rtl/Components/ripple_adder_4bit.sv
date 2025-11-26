@@ -1,9 +1,19 @@
+/*
+*----------------------------------------------------------------------
+* Module:   Ripple Adder
+* Function: 4 Bit Ripple adder.
+* Author:   Bibek Bhattarai
+* Date:     Nov 2025
+*----------------------------------------------------------------------
+*/
+
+
 module ripple_adder_4bit (
-   input logic [3:0]a,
-   input logic [3:0]b,
-   input logic c_in,
-   output logic [3:0]f,
-   output logic c_out
+   input logic    [3:0] a,
+   input logic    [3:0] b,
+   input logic          c_in,
+   output logic   [3:0] f,
+   output logic         c_out
 );
    logic [3:0] c_temp;
 

@@ -1,10 +1,20 @@
+/*
+*----------------------------------------------------------------------
+* Module:   Arithmetic Unit
+* Function: Arithmetic Unit that implements all 16 mathematical
+* functions in the 74181.
+* Author:   Bibek Bhattarai
+* Date:     Nov 2025
+*----------------------------------------------------------------------
+*/
+
 module arithmetic_unit (
-   input logic [3:0]s,
-   input logic [3:0]a,
-   input logic [3:0]b,
-   input logic c_in;
-   output logic [3:0]f
-   output logic c_out;
+   input logic    [3:0] s,
+   input logic    [3:0] a,
+   input logic    [3:0] b,
+   input logic          c_in;
+   output logic   [3:0] f
+   output logic         c_out;
 )  
    // adder inputs
    logic temp_a, temp_b;

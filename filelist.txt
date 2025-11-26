@@ -1,1 +1,5 @@
+hdl/rtl/Components/adder.sv
+hdl/rtl/Components/arithmetic_unit.sv
+hdl/rtl/Components/logic_unit.sv
+hdl/rtl/Components/ripple_adder_4bit.sv
 hdl/rtl/Components/shifter.sv

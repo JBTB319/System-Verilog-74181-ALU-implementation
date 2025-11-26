@@ -1,6 +1,16 @@
+/*
+*----------------------------------------------------------------------
+* Module:   Shifter
+* Function: Shift all bits once to the left
+* Author:   Bibek Bhattarai
+* Date:     Nov 2025
+*----------------------------------------------------------------------
+*/
+
+
 module shifter (
-   input logic [3:0] a,
-   output logic [3:0] a_s
+   input logic    [3:0] a,
+   output logic   [3:0] a_s
 );
    assign a_s[3] = a[2];
    assign a_s[2] = a[1];
