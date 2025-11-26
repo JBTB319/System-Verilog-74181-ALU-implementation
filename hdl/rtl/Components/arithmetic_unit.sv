@@ -75,7 +75,7 @@ module arithmetic_unit (
          end
          4'b1011: begin
             temp_a = ab;
-            temp_b = 4'1111;
+            temp_b = 4'b1111;
          end
          4'b1100: begin
             temp_b = temp_a_s;
