@@ -1,4 +1,4 @@
-class adder_transcation;
+class adder_transaction;
    rand logic [3:0]A;
    rand logic [3:0]B;
    rand logic C_IN;
@@ -14,7 +14,7 @@ endclass
 
 
 class scoreboard;
-   function void calc(adder_transcation trans);
+   function void calc(adder_transaction trans);
       logic [4:0]expected_value;
       
       expected_value = trans.A + trans.B + trans.C_IN;
@@ -27,7 +27,7 @@ endclass
 
 
 module tb_ripple_adder_4bit();
-   adder_transcation adder_trans;
+   adder_transaction adder_trans;
    scoreboard sc;
    logic [3:0] a_in, b_in, f_in;
    logic c_out, c_in;
