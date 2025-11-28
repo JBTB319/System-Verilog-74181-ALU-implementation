@@ -20,7 +20,7 @@ module alu (
    output logic         g,
    output logic         a_eq_b,
    output logic         cn_4
-)
+);
 
 logic [3:0] log_f;
 logic [3:0] art_f;
@@ -40,7 +40,7 @@ arithmetic_unit art_unit (
    .c_in(cn),
    .f(art_f),
    .c_out(art_cn_4)
-)
+);
 
 always_comb begin
    case (m)
@@ -58,7 +58,6 @@ always_comb begin
          a_eq_b = 1;
          cn_4 = 1;
       end
-      default: 
    endcase
 end
 

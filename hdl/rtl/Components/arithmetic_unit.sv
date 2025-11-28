@@ -12,29 +12,29 @@ module arithmetic_unit (
    input logic    [3:0] s,
    input logic    [3:0] a,
    input logic    [3:0] b,
-   input logic          c_in;
-   output logic   [3:0] f
-   output logic         c_out;
-)  
+   input logic          c_in,
+   output logic   [3:0] f,
+   output logic         c_out
+);  
    // adder inputs
-   logic temp_a, temp_b;
+   logic [3:0] temp_a, temp_b;
    logic [3:0] temp_a_s;
 
    // Helpers
    logic [3:0] ab, ab_bar, aOrb, aOrb_bar;
 
-   adder add1 (
+   ripple_adder_4bit add1 (
       .a(temp_a),
       .b(temp_b),
       .c_in(c_in),
       .f(f),
       .c_out(c_out)
-   )
+   );
 
    shifter shift (
       .a(a),
       .a_s(temp_a_s)
-   )
+   );
 
    assign ab = a & b;
    assign ab_bar = a & ~b;
@@ -53,7 +53,7 @@ module arithmetic_unit (
             temp_a = aOrb;
          end
          4'b0010: begin 
-            temp = aOrb_bar;
+            temp_a = aOrb_bar;
          end
          4'b0011: begin
             temp_a = 4'b1111;
@@ -99,10 +99,8 @@ module arithmetic_unit (
             temp_b = a;
          end
          4'b1111: begin
-            temp_b = 4'b1111
+            temp_b = 4'b1111;
          end
-         default: 
-   endcase
+      endcase
    end
-
 endmodule

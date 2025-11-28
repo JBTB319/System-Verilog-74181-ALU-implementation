@@ -3,3 +3,14 @@ hdl/rtl/Components/arithmetic_unit.sv
 hdl/rtl/Components/logic_unit.sv
 hdl/rtl/Components/ripple_adder_4bit.sv
 hdl/rtl/Components/shifter.sv
+hdl/rtl/ALU/alu.sv
+
+tb/ALU/sequence/alu_transaction.sv
+tb/ALU/interfaces/alu_if.sv
+
+tb/ALU/agent/alu_driver.sv
+tb/ALU/agent/alu_monitor.sv
+tb/ALU/agent/alu_agent.sv
+
+tb/ALU/sequence/alu_sequence.sv
+tb/ALU/sequence/alu_sweep_sequence.sv

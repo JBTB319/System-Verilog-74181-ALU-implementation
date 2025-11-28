@@ -11,7 +11,7 @@ class alu_sequence;
    endtask
 
    task send_transaction(alu_transaction trans);
-      driver.drive_transaction(tr);
+      driver.drive_transaction(trans);
    endtask
 
 endclass
