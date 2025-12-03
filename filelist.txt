@@ -14,3 +14,6 @@ tb/ALU/agent/alu_agent.sv
 
 tb/ALU/sequence/alu_sequence.sv
 tb/ALU/sequence/alu_sweep_sequence.sv
+tb/ALU/sequence/alu_logic_sequence.sv
+tb/ALU/sequence/alu_math_c_sequence.sv
+tb/ALU/sequence/alu_math_sequence.sv

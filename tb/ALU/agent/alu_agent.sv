@@ -11,6 +11,10 @@ class alu_agent;
       this.monitor = new(vif);
    endfunction
 
+   function void set_id(int id);
+      monitor.set_id(id);
+   endfunction
+
    task start();
       fork
          this.monitor.run();

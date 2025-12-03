@@ -1,6 +1,6 @@
 class alu_sweep_sequence extends alu_sequence;
    function new (alu_driver v);
-      super.new(v);
+      super.new(v, 1);
    endfunction
 
    virtual task run();

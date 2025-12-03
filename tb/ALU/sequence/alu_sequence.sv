@@ -1,9 +1,10 @@
 class alu_sequence;
-
    protected alu_driver driver;
+   int seq_id;
 
-   function new(alu_driver driver);
+   function new(alu_driver driver, int id);
       this.driver = driver;
+      this.seq_id = id;
    endfunction
 
    virtual task run(); 
