@@ -19,9 +19,13 @@ module alu_top();
    initial begin
       agent = new(a_if);
       seq = new (agent.driver);
+      
       agent.start();
-      seq.run();
 
-      $display("hello");
+      #1;
+
+      fork
+         seq.run();
+      join_none
    end
 endmodule

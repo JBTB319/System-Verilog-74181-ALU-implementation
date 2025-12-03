@@ -18,7 +18,7 @@ class alu_sweep_sequence extends alu_sequence;
          a = $urandom_range(0,15);
          b = $urandom_range(0,15);
          cn = 0;
-         m = i > 15 ? 1 : 0;
+         m = i > 15 ? 0 : 1;
 
          trans = new(op, a, b, cn, m);
 

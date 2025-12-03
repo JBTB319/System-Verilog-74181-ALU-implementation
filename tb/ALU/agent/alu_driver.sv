@@ -11,7 +11,6 @@ class alu_driver;
       this.vif.b = tr.b;
       this.vif.cn = tr.cn;
       this.vif.m = tr.m;
-
       #10;
    endtask
 endclass

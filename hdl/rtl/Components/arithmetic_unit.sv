@@ -42,23 +42,25 @@ module arithmetic_unit (
    assign aOrb_bar = a | ~b;
   
    always_comb begin
-      temp_a = a;
-      temp_b = 0;
-
       case (s)
          4'b0000: begin
+            temp_a = a;
             temp_b = 0;
          end
          4'b0001: begin
             temp_a = aOrb;
+            temp_b = 0;
          end
          4'b0010: begin 
             temp_a = aOrb_bar;
+            temp_b = 0;
          end
          4'b0011: begin
             temp_a = 4'b1111;
+            temp_b = 0;
          end
          4'b0100: begin
+            temp_a = a;
             temp_b = ab_bar;
          end
          4'b0101: begin
@@ -66,6 +68,7 @@ module arithmetic_unit (
             temp_b = ab_bar;
          end
          4'b0110: begin
+            temp_a = a;
             temp_b = ~b;
          end
          4'b0111: begin
@@ -77,6 +80,7 @@ module arithmetic_unit (
             temp_b = b;
          end
          4'b1001: begin
+            temp_a = a;
             temp_b = b;
          end
          4'b1010: begin
@@ -88,6 +92,7 @@ module arithmetic_unit (
             temp_b = 4'b1111;
          end
          4'b1100: begin
+            temp_a = a;
             temp_b = temp_a_s;
          end
          4'b1101: begin
@@ -99,6 +104,7 @@ module arithmetic_unit (
             temp_b = a;
          end
          4'b1111: begin
+            temp_a = a;
             temp_b = 4'b1111;
          end
       endcase

@@ -7,12 +7,13 @@ class alu_monitor;
 
    task run();
       forever begin
+         @(vif.s or vif.a or vif.b or vif.cn or vif.m);
+
+         #5;
+
          $display("IN  : S=%b, A=%b, B=%b, CN=%b,  M=%b", 
             vif.s, vif.a, vif.b, vif.cn, vif.m
          );
-
-         @(vif.s or vif.a or vif.b or vif.cn or vif.m);
-
          $display("OUT : F=%b, P=%b, G=%b, C4=%b, AB=%b",
             vif.f, vif.p, vif.g, vif.cn_4, vif.a_eq_b
          );
